@@ -11,7 +11,7 @@ class ShoppinglistController extends Controller
      */
     public function index()
     {
-        return view('shoppinglist')
+        return view('shoppinglists.shoppinglist')
    ->with('message','gestion des listes de courses');
     }
 

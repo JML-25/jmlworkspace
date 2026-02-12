@@ -21,7 +21,24 @@ class CookingController extends Controller
      */
     public function create()
     {
-        return view('cookings.create');
+	$cooking['name']="";
+	$cooking['description']="";
+	$cooking['additionalinformation']="";
+	$cooking['recipestatus']="";
+	$cooking['typeofdish']="";
+	$cooking['difficultylevel']="";
+	$cooking['preparationtime']="";
+	$cooking['cookingtime']="";
+	$cooking['totaltime']="";
+	$cooking['servings']="";
+	$cooking['calories']="";
+	$cooking['fat']="";
+	$cooking['carbs']="";    
+	$cooking['protein']="";
+	$cooking['totalcost']="";
+
+	$isEdit = False;
+	return view('cookings.createedit', compact('cooking','isEdit'));
   
     }
 
@@ -68,7 +85,7 @@ class CookingController extends Controller
      */
     public function show(Cooking $cooking)
     {
-         return view('cookings.show', compact('cooking'));
+		return view('cookings.show', compact('cooking'));
     }
 
     /**
@@ -76,7 +93,8 @@ class CookingController extends Controller
      */
     public function edit(Cooking $cooking)
     {
-        return view('cookings.edit', compact('cooking'));
+		$isEdit = True;
+		return view('cookings.createedit', compact('cooking','isEdit'));
     }
 
     /**

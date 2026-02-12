@@ -18,6 +18,8 @@ class Cookingingredient extends Model
         'quantity',
         'unit',
         'instruction',
+		'cooking_id',
+		'ingredient_id',
             ];
 public function cooking(): BelongsTo
 { 

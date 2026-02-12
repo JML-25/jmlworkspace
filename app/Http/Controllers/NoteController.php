@@ -11,7 +11,7 @@ class NoteController extends Controller
      */
     public function index()
     {
-       return view('note')
+       return view('notes.note')
    ->with('message','gestion des notes');
     }
 

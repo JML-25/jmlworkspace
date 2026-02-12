@@ -1,0 +1,49 @@
+.menu-link,
+.menu-toggle {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.menu-link:hover,
+.menu-toggle:hover {
+  background: rgb(7 89 133); /* sky-800 */
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgb(3 105 161); /* sky-700 */
+  min-width: 220px;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  z-index: 50;
+}
+
+.submenu-right {
+  left: 100%;
+  top: 0;
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .navigation-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgb(2 132 199); /* sky-600 */
+  }
+
+  .submenu,
+  .submenu-right {
+    position: static;
+    margin-left: 1rem;
+  }
+}
+
+.hidden {
+  display: none !important;
+}

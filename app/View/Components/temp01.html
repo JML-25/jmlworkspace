@@ -1,0 +1,204 @@
+
+<!-- create an application code -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" />    
+    <title>JML workspace</title>
+  </head>
+
+  <body class="bg-gray-100">
+    <nav class="bg-sky-600 text-white">
+	<div>
+    <!-- Order your soul. Reduce your wants. - Augustine -->
+    hello jml
+</div>	<div class="container mx-auto px-4 md:flex items-center justify-between gap-6">
+    <!-- Logo -->
+		<div class="flex items-center justify-between md:w-auto w-full">
+			<a href="http://localhost:8000" class="py-5 px-2 text-white flex-1 font-bold">Espace de Jean-Michel</a>
+
+			<!-- mobile menu icon -->
+			<div class="md:hidden flex items-center">
+				<button type="button" class="mobile-menu-button">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+				</svg>
+				</button>
+			</div>
+		</div>
+
+		<div class="hidden md:flex md:flex-row flex-col items-center justify-start md:space-x-1 pb-3 md:pb-0 navigation-menu">
+			<a href="http://localhost:8000/welcome" class="py-2 px-3 block hover:bg-sky-800">Accueil</a>
+			<!-- Dropdown menu -->
+			<div class="">
+				<button type="button" class="dropdown-toggle py-2 px-3 hover:bg-sky-800 flex items-center gap-2 rounded">
+				<span class="pointer-events-none select-none ">Vie pratique</span>
+				<svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+				</svg>
+		 
+				</button>
+				<div class="dropdown-menu absolute hidden bg-sky-700 text-white rounded-b-lg pb-2 w-48">
+					<a href="http://localhost:8000/shoppinglists" class="block px-6 py-2 hover:bg-sky-800">Courses</>
+					<a href="http://localhost:8000/todolists" class="block px-6 py-2 hover:bg-sky-800">A faire</a>
+					<a href="http://localhost:8000/cookings" class="block px-6 py-2 hover:bg-sky-800">Recettes</a>
+					<a href="http://localhost:8000/applicationcodes" class="block px-6 py-2 hover:bg-sky-800">Application codes</a>
+					<a href="http://localhost:8000/notes" class="block px-6 py-2 hover:bg-sky-800">Notes</a>
+				</div>
+			</div>
+	  
+			<!-- Dropdown menu -->
+			<div class="">
+				<button  class="dropdown-toggle py-2 px-3 hover:bg-sky-800 flex items-center gap-2 rounded">
+					<span class="pointer-events-none select-none">Vie intellectuelle</span>
+				<svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+				</svg>
+				</button>
+				<div class="dropdown-menu absolute hidden bg-sky-700 text-white rounded-b-lg pb-2 w-48">
+				  <a href="http://localhost:8000/daybooks" class="block px-6 py-2 hover:bg-sky-800">Journal</a>
+				  <a href="http://localhost:8000/thoughts" class="block px-6 py-2 hover:bg-sky-800">Pensées</a>
+				  <a href="http://localhost:8000/notes" class="block px-6 py-2 hover:bg-sky-800">Notes</a>
+				</div>
+			</div>
+			<div class="">
+				<button type="button" class="dropdown-toggle py-2 px-3 hover:bg-sky-800 flex items-center gap-2 rounded">
+				  <span class="pointer-events-none select-none ">Administration</span>
+				  <svg class="w-3 h-3 pointer-events-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+				  </svg>
+				</button>
+				<div class="dropdown-menu absolute hidden bg-sky-700 text-white rounded-b-lg pb-2 w-48">
+				  <a href="http://localhost:8000/shoppinglists" class="block px-6 py-2 hover:bg-sky-800">Courses</>
+				  <a href="http://localhost:8000/todolists" class="block px-6 py-2 hover:bg-sky-800">A faire</a>
+				  <a href="http://localhost:8000/cookings" class="block px-6 py-2 hover:bg-sky-800">Recettes</a>
+				  <a href="http://localhost:8000/applicationcodes" class="block px-6 py-2 hover:bg-sky-800">Application codes</a>
+
+					  <a href="http://localhost:8000/notes" class="block px-6 py-2 hover:bg-sky-800">Notes</a>
+				</div>
+			</div>
+			<a href="http://localhost:8000/admin" class="py-2 px-3 block hover:bg-sky-800">Administration</a>
+		</div>
+	</div>
+</nav>
+ 
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all dropdown toggle buttons
+  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      // Find the next sibling element which is the dropdown menu
+      const dropdownMenu = toggle.nextElementSibling;
+
+      // Toggle the 'hidden' class to show or hide the dropdown menu
+      if (dropdownMenu.classList.contains("hidden")) {
+        // Hide any open dropdown menus before showing the new one
+        document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+          menu.classList.add("hidden");
+        });
+
+        dropdownMenu.classList.remove("hidden");
+      } else {
+        dropdownMenu.classList.add("hidden");
+      }
+    });
+  });
+
+  // Clicking outside of an open dropdown menu closes it
+  window.addEventListener("click", function (e) {
+    if (!e.target.matches(".dropdown-toggle")) {
+      document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+        if (!menu.contains(e.target)) {
+          menu.classList.add("hidden");
+        }
+      });
+    }
+  });
+
+  // Mobile menu toggle
+
+  const mobileMenuButton = document.querySelector(".mobile-menu-button");
+  const mobileMenu = document.querySelector(".navigation-menu");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+});
+
+</script>
+     
+    <main class="container mx-auto p-4"><div class="max-w-800 p-4 bg-white rounded-2xl shadow-lg">
+  <div class="flex items-start justify-between pb-2 border-b rounded-t">
+        <h3 class="text-xl font-semibold">
+            Création d'un élément de <span style = "font-style: italic">application code</span>
+        </h3>
+        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="product-modal">
+           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+    </div>
+   
+    
+    <form action="http://localhost:8000/applicationcodes"  method="POST"   enctype="multipart/form-data"  class="space-y-4">
+	<input type="hidden" name="_token" value="rlhswFyabpgGqhZHU2aif4iAi0QHgliBtm3O70PV" autocomplete="off">    
+	<div class="grid grid-cols-6 gap-6 w-full mt-3">
+
+
+		<div class="md:col-span-3 col-span-6>
+    <!-- inputtext component rendered here -->
+    <label for="table" class="block text-gray-700 font-medium mb-1">Table</label>
+			<input type="text" id="table"name="table" required
+				class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+				value="" 
+	/>
+</div>		<div class="md:col-span-3 col-span-6>
+    <!-- inputtext component rendered here -->
+    <label for="code" class="block text-gray-700 font-medium mb-1">Code</label>
+			<input type="text" id="code"name="code" required
+				class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+				value="" 
+	/>
+</div>			   
+		<div class="col-span-2 sm:col-span-1">
+			<label for="sequence" class="block text-gray-700 font-medium mb-1">Sequence</label>
+			<input type="number" id="sequence" name="sequence" 
+				class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+				value=""
+			>
+			   
+		</div >
+		<div class="md:col-span-2 col-span-6>
+    <!-- inputtext component rendered here -->
+    <label for="label" class="block text-gray-700 font-medium mb-1">Label</label>
+			<input type="text" id="label"name="label" required
+				class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+				value="" 
+	/>
+</div>		<div class="md:col-span-2 col-span-6>
+    <!-- inputtext component rendered here -->
+    <label for="internal" class="block text-gray-700 font-medium mb-1">Internal</label>
+			<input type="text" id="internal"name="internal" required
+				class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" 
+				value="" 
+	/>
+</div>		
+	  
+		
+
+
+      <!-- Bouton -->
+		<div class="pt-4 col-span-full" >
+			<button type="submit"
+				class="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition duration-200">
+          Lancer la création de l'élément
+			</button>
+		</div>
+	</div>
+    </form>
+  </div></main>
+  </body>
+</html>

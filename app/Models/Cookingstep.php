@@ -18,6 +18,7 @@ class Cookingstep extends Model
         'instruction',
         'expectedtime',
         'additionalinformation',
+		'cooking_id',
         
             ];
 

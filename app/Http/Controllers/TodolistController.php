@@ -11,7 +11,7 @@ class TodolistController extends Controller
      */
     public function index()
     {
-        return view('todolist')
+        return view('todolists.todolist')
    ->with('message','gestion des listes de tâches à faire');
     }
 

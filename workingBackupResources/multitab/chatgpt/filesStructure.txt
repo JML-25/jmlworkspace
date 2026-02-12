@@ -1,0 +1,39 @@
+app/
+├── Http/Controllers/CookingController.php
+├── Livewire/
+│   ├── Cookings/
+│   │   ├── CookingEditor.php
+│   │   ├── CookingTab.php
+│   │   ├── IngredientsTab.php
+│   │   └── StepsTab.php
+│   └── Ingredients/
+│       └── IngredientLookup.php
+├── Models/
+│   ├── Cooking.php
+│   ├── Cookingingredient.php
+│   ├── Cookingstep.php
+│   ├── Ingredient.php
+│   └── ColumnValueOption.php
+└── Services/ColumnValueOptionsService.php
+
+resources/
+├── css/
+│   ├── app.css
+│   └── forms.css
+└── views/
+    ├── cookings/editor.blade.php
+    ├── components/form/
+    │   ├── input.blade.php
+    │   ├── textarea.blade.php
+    │   ├── select.blade.php
+    │   ├── button.blade.php
+    │   └── tabs.blade.php
+    └── livewire/
+        ├── cookings/
+        │   ├── cooking-editor.blade.php
+        │   ├── cooking-tab.blade.php
+        │   ├── ingredients-tab.blade.php
+        │   └── steps-tab.blade.php
+        └── ingredients/ingredient-lookup.blade.php
+
+routes/web.php

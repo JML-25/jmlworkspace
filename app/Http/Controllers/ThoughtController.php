@@ -11,7 +11,7 @@ class ThoughtController extends Controller
      */
     public function index()
     {
-        return view('thought')
+        return view('thoughts.thought')
    ->with('message','gestion des pensées');
     }
 

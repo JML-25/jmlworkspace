@@ -21,16 +21,20 @@
     </div>
    
     <div class="mt-5"><a href="{{ route('cookings.edit', $cooking) }}" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Modifier</a>
-    <form action="{{ route('cookings.destroy', $cooking) }}" method="POST" style="display:inline;">
+    <a href="{{ route('cookings.cookingingredients.create', $cooking) }}" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Ajouter un ingrédient</a>
+	<a href="{{ route('cookings.cookingsteps.create', $cooking) }}" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Ajouter une étape</a>
+	
+	<form action="{{ route('cookings.destroy', $cooking) }}" method="POST" style="display:inline;">
         @csrf
         @method('DELETE')
         <button type="submit" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline cursor-pointer">Supprimer</button>
     </form>
    
 		<!-- Lien pour créer un nouvel article : "cookings.create" -->
-		<a href="{{ route('cookings.create') }}" title="Créer une recette" class="mb-5 mr-3 text-sm bg-blue-800 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline " >Créer une nouvelle recette</a>
+
+	<a href="{{ route('cookings.create') }}" title="Créer une recette" class="mb-5 mr-3 text-sm bg-blue-800 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline " >Créer une nouvelle recette</a>
 	
     <a href="{{ route('cookings.index') }}" class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Retour</a>
-</div></div>
+</div>
     
 </x-layout>

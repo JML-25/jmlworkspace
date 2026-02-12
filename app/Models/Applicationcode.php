@@ -15,5 +15,6 @@ class Applicationcode extends Model
         'code',
         'sequence',
         'label',
+        'internal',
              ];
 }

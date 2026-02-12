@@ -11,7 +11,7 @@ class DaybookController extends Controller
      */
     public function index()
     {
-        return view('daybook')
+        return view('daybooks.daybook')
    ->with('message','gestion des journaux');
     }
 

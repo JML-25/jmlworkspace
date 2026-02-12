@@ -13,11 +13,9 @@ return new class extends Migration
     {
         Schema::create('cookingingredients', function (Blueprint $table) {
             $table->id();
-            $table->foreign('cooking_id')->references('id')
-                ->on('cookings');
+            $table->foreignId('cooking_id')->constrained('cookings')->onDelete('cascade');
             ;
-            $table->foreign('ingredient_id')->references('id')
-                ->on('ingredients');
+            $table->foreignId('ingredient_id')->constrained('ingredients')->onDelete('cascade');
             ;
             $table->integer('sequence');
             $table->string('title');
